@@ -1,4 +1,5 @@
-**VARIABLES**  
+**VARIABLES**
+
 ```
 n   = número de linhas
 m   = número de colunas
@@ -7,13 +8,10 @@ j   = índice de uma coluna
 c_i = índice da coluna pela qual a escada passa na i-ésima linha 
 ```
 
-**REALIZATION**  
+**REALIZATION**
+
 ```
-memo[i, 0] = 1  
-memo[0, j] = 1  
-memo[i, j] = (memo[i-1, c] - 1) * 2 + 1,   if (i > c)  
-memo[i, j] = (memo[i, c-1] - 1) * 2 + 1,   if (c > i)  
-memo[i, j] = (memo[i-1, c-1] - 1) * 4 + 2, if (i == c)
+TODO
 ```
 
 **RESULTS**
