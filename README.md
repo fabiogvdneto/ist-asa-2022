@@ -1,33 +1,32 @@
 # Projeto 2
 
-**Compilation:** `g++ -std=c++11 -O3 -Wall main.cpp -lm -o main`
+Compilation: `g++ -std=c++11 -O3 -Wall main.cpp -lm -o main`
 
-**Usage:** `./main`
+Usage: `./main`
 
-**Input:**
+Input:
 - Line 1: number of vertices (V >= 1).
 - Line 2: number of edges (E >= 0).
 - Line 3..(E+2): two vertices and a weight (u, v and w), representing an edge.
 
 Each vertice is represented by an integer between 1 and V.
-
 The weight of an edge is also represented by an integer (w >= 0).
 
 ### Dense Graph Generator
 
 The program dgg.c generates dense graphs given a number of vertices (useful for testing).
 
-**Compilation:** `gcc -O3 -Wall -o dgg dgg.c`
+Compilation: `gcc -O3 -Wall -o dgg dgg.c`
 
-**Usage:** `./dgg <num_of_vertices> > <test>`
+Usage: `./dgg <num_of_vertices> > <test>`
 
 ### Delaunay Triangulation
 
 The program delaunay2graph.cpp generates a graph using Delaunay Triangulation with some random parameters (useful for testing).
 
-**Compilation:** `g++ -std=c++11 -O3 -o d2g delaunay2graph.cpp -lm`
+Compilation: `g++ -std=c++11 -O3 -o d2g delaunay2graph.cpp -lm`
 
-**Usage:** `./d2g <num_of_vertices> <max_coord> <probability> <seed> > <test>`
+Usage: `./d2g <num_of_vertices> <max_coord> <probability> <seed> > <test>`
 
 ### Graph
 
