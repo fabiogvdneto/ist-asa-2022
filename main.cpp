@@ -14,7 +14,9 @@ class DisjointSet {
         int *ranks;
 
         /**
-         * Links 
+         * Links subset u with subset v.
+         * 
+         * Time Complexity: O(1).
          */
         void Link(int u, int v) {
             if (ranks[u] > ranks[v]) {
@@ -43,7 +45,7 @@ class DisjointSet {
         }
 
         /**
-         * Creates a new list with element u.
+         * Makes a new set, being u the only element.
          * 
          * Time Complexity: O(1).
          */
@@ -60,24 +62,24 @@ class DisjointSet {
          * Time Complexity:
          * - Worst Case: O(V).
          * - Best Case: O(1).
-         * - Average: O(alpha(V)) - with path compression.
+         * - Average: O(alpha(V)).
          */
         int FindSet(int u) {
             return (u == parents[u]) ? u : (parents[u] = FindSet(parents[u]));
         }
 
         /**
-         * Performs the union of u and v: (finds the subsets of u and v, then links them).
-         * 1. Finds subset of u and v.
-         * 2. If subset is the same, returns false and has no side effect.
-         *    Otherwise, both subsets are linked.
+         * Performs the union of two subsets:
+         * 1. Finds subsets of u and v.
+         * 2. If subsets are the same, returns false with no side effect.
+         * 3. Otherwise, both subsets are linked, and true is returned.
          * 
          * Uses Union by Rank (when linking).
          * 
          * Time Complexity:
          * - Worst Case: O(V).
          * - Best Case: O(1).
-         * - Average: O(alpha(V)) - with union by rank.
+         * - Average: O(alpha(V)).
          */
         bool Union(int u, int v) {
             if ((u = FindSet(u)) == (v = FindSet(v))) return false;
@@ -95,16 +97,16 @@ int n_vertices;
 int n_edges;
 Edge *edges;
 
-/* Kruskal Algorithm */
+/* Kruskal */
 
 /**
- * Applies Kruskal Algorithm to the graph to create a maximum spanning tree (MST).
+ * Applies Kruskal Algorithm to the graph to create a maximum spanning tree (MaST).
  * Returns the sum of the weights of the edges that are safe to the MST.
  * 
  * Time Complexity: O(E log(E)).
  */
 int kruskal(void) {
-    // Initialization: O(E log(E)).
+    // Initialization (Sort): O(E log(E)).
     
     sort(edges, edges+n_edges, [](const Edge& a, const Edge& b) {
         return (a.w > b.w);
