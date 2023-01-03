@@ -10,6 +10,9 @@ int main(int argc, char* argv[])
 		printf("Generates an undirected graph with n vertices, numbered 1 to n, where vertex i is connected to vertices i+1 to n with edges of weight i.\n\n");
 		printf("   Usage: %s n\n\n", argv[0]);
 	}
+
+	
+
 	else {
 		n = atoi(argv[1]);
 		printf("%u\n%u\n", n, n*(n-1)/2);
