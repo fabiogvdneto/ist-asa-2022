@@ -7,7 +7,7 @@
 **Input:**
 - Line 1: number of vertices (V >= 1).
 - Line 2: number of edges (E >= 0).
-- Line 1..E: two vertices and a weight (u, v and w), representing an edge.
+- Line 3..(E+2): two vertices and a weight (u, v and w), representing an edge.
 
 Each vertice is represented by an integer between 1 and V.
 
