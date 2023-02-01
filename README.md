@@ -1,25 +1,20 @@
-**VARIABLES**
+## Variables
 
-```
-n   = número de linhas
-m   = número de colunas
-i   = índice de uma linha
-j   = índice de uma coluna
-c_i = índice da coluna pela qual a escada passa na i-ésima linha 
-```
+Name | Description
+---- | -----------
+n    | number of lines
+m    | maximum number of columns
+i    | line index
+j    | column index
+c_i  | number of columns at line i 
 
-**REALIZATION**
-
-TODO
-
-**COMPILATION**
+## Compilation
 
 `g++ -std=c++11 -O3 -Wall <filename>.cpp -lm`
 
-**TESTS**
+## Tests
 
-Execution:
-`./a.out < <test>`
+To run a test just execute: `./a.out < <test>`
 
 Tests provided (inside tests folder):
 - X.txt (result: 0)
@@ -27,10 +22,10 @@ Tests provided (inside tests folder):
 - W.txt (result: 58)
 - Z.txt (result: 13807553414899)
 
-**INSTANCE GENERATOR**
+## Instance Generator
 
-Compilation:
+How to compile:
 `g++ -std=c++11 -O3 -Wall ladrilho_valido.cpp -lm -o gerador`
 
-Execution:
+How to execute:
 `./gerador <num-of-lines> <num-of-columns> <seed> > <test>`
