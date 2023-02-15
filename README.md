@@ -19,7 +19,7 @@ c_i  | number of columns at line i
 
 ## Compilation
 
-Recommended way to compile the program: `g++ -std=c++11 -O3 -Wall <filename>.cpp -lm`
+Recommended way to compile the program: `g++ -std=c++11 -O3 -Wall main.cpp -lm`
 
 ## Tests
 
